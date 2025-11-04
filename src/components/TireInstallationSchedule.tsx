@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Calendar, Search, Filter, Plus, Edit, Trash2, CheckCircle, Clock, Wrench, MapPin, Eye, FileText, ArrowRight, Printer, Download } from 'lucide-react';
 import { Button } from './ui/button';
@@ -10,8 +12,8 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { toast } from 'sonner@2.0.3';
-import exampleImage from 'figma:asset/14cb7a6cd99c07eea63cb4725994d9891eb71a59.png';
+import { toast } from 'sonner';
+const exampleImage = '/assets/14cb7a6cd99c07eea63cb4725994d9891eb71a59.png';
 
 interface InstallationSchedule {
   id: string;
@@ -148,6 +150,7 @@ export function TireInstallationSchedule() {
   const [newSchedule, setNewSchedule] = useState({
     vehicleNumber: '',
     vehicleType: '',
+    tireBrand: '',
     tireSize: '',
     quantity: 0,
     tirePosition: '',
@@ -202,6 +205,7 @@ export function TireInstallationSchedule() {
     setNewSchedule({
       vehicleNumber: '',
       vehicleType: '',
+      tireBrand: '',
       tireSize: '',
       quantity: 0,
       tirePosition: '',
@@ -260,6 +264,7 @@ export function TireInstallationSchedule() {
     setNewSchedule({
       vehicleNumber: schedule.vehicleNumber,
       vehicleType: schedule.vehicleType,
+      tireBrand: schedule.tireBrand || '',
       tireSize: schedule.tireSize,
       quantity: schedule.quantity,
       tirePosition: schedule.tirePosition,
@@ -297,6 +302,7 @@ export function TireInstallationSchedule() {
     setNewSchedule({
       vehicleNumber: '',
       vehicleType: '',
+      tireBrand: '',
       tireSize: '',
       quantity: 0,
       tirePosition: '',

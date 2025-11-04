@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Truck, Calendar, FileText, Plus, Search, Eye, RefreshCcw, AlertCircle, CheckCircle, XCircle, Upload, X } from 'lucide-react';
 import { Button } from './ui/button';
@@ -8,7 +10,7 @@ import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Textarea } from './ui/textarea';
 import { Badge } from './ui/badge';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 // Interface untuk jadwal dari Dispatcher Scheduling
 interface Schedule {

@@ -1,3 +1,5 @@
+'use client';
+
 import { MapPin, Layers, Maximize, RotateCcw, Navigation, Truck, AlertTriangle, Clock, Fuel } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useState } from 'react';

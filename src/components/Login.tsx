@@ -1,18 +1,20 @@
+'use client';
+
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
+import { useAuth } from './AuthContext';
 
-interface LoginProps {
-  onLogin: (credentials: { username: string; password: string; rememberMe: boolean }) => void;
-}
-
-export function Login({ onLogin }: LoginProps) {
+export function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+  const { login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,10 +31,14 @@ export function Login({ onLogin }: LoginProps) {
       // Demo credentials - dalam production harus validasi dengan backend
       if (username === 'admin' && password === 'admin123') {
         toast.success('Login berhasil! Selamat datang ' + username);
-        onLogin({ username, password, rememberMe: true });
+        login({ username, password, rememberMe: true });
+        router.replace('/dashboard');
+        setIsLoading(false);
       } else if (username === 'user' && password === 'user123') {
         toast.success('Login berhasil! Selamat datang ' + username);
-        onLogin({ username, password, rememberMe: true });
+        login({ username, password, rememberMe: true });
+        router.replace('/dashboard');
+        setIsLoading(false);
       } else {
         toast.error('Email/username atau password salah');
         setIsLoading(false);

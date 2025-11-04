@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -6,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { VehicleChecklistForm } from './VehicleChecklistForm';
 import { ExcelExportChecklist } from './ExcelExportChecklist';
 import { Search, Plus, Filter, Eye, Edit, Trash2, Calendar, FileText, ClipboardCheck } from 'lucide-react';
-import exampleImage from 'figma:asset/aca0b85c34367e255db38332274fec06fc930dcc.png';
+const exampleImage = '/assets/aca0b85c34367e255db38332274fec06fc930dcc.png';
 
 interface VehicleCheckRecord {
   id: string;

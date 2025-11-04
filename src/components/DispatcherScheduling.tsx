@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { 
   Calendar, Clock, Truck, User, Plus, CheckCircle, 
@@ -11,7 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Label } from './ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 // Master Data
 const MASTER_DRIVERS = [

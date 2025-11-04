@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { User, Mail, Phone, MapPin, Calendar, Shield, Edit, Save, X, Camera, Briefcase, Building } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
@@ -8,7 +10,7 @@ import { Button } from './ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { useAuth } from './AuthContext';
 
 interface UserData {

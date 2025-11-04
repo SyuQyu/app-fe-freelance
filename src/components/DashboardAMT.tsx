@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { RefreshCw, Calendar, Download, Settings, TrendingUp, TrendingDown, Truck, MapPin, AlertTriangle, Pause, CheckCircle } from 'lucide-react';
 

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Search, Plus, Edit, Trash2, CheckCircle, Wrench, Eye } from 'lucide-react';
 import { Button } from './ui/button';
@@ -9,7 +11,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Label } from './ui/label';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface InstallationSchedule {
   id: string;

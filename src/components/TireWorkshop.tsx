@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Calendar, Package, Wrench, History, FileText, Plus, Edit, Trash2, Search, Filter, Download, Clock, CheckCircle, AlertCircle, XCircle, Truck, User, MapPin } from 'lucide-react';
 import { Button } from './ui/button';
@@ -10,7 +12,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from './ui/dialog';
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface TireInventory {
   id: string;

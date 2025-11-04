@@ -1,3 +1,5 @@
+'use client';
+
 import { TrendingUp, TrendingDown, Truck, Zap, MapPin, AlertTriangle, CheckCircle, Pause } from 'lucide-react';
 
 interface StatCardProps {

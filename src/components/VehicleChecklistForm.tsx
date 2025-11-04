@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
@@ -7,7 +9,7 @@ import { Button } from './ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Calendar, Truck, User, Save, Printer } from 'lucide-react';
-import exampleImage from 'figma:asset/ae67a0fdc3a802d2bad6d56b28f4b975b1ee0579.png';
+const exampleImage = '/assets/ae67a0fdc3a802d2bad6d56b28f4b975b1ee0579.png';
 import { useDropdownSettings } from './DropdownSettingsContext';
 
 interface ChecklistItem {

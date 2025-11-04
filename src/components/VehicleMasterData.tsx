@@ -1,6 +1,7 @@
+'use client';
+
 import { useState } from 'react';
 import { Search, Plus, Edit, Trash2, Eye, Filter, Download, Upload, Truck, Calendar, MapPin, User, Fuel, Settings, AlertCircle, FileText, Camera, File } from 'lucide-react';
-import exampleImage from 'figma:asset/c44388eb1ef9d8e063211f8bab324a80f4c0e22c.png';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Badge } from './ui/badge';
@@ -10,10 +11,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Textarea } from './ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import exampleTruckImage from 'figma:asset/18da02685b40a6d858b6c680dda16079eb3f9574.png';
 import { DatePicker } from './DatePicker';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { useDropdownSettings } from './DropdownSettingsContext';
+const exampleImage = '/assets/c44388eb1ef9d8e063211f8bab324a80f4c0e22c.png';
+const exampleTruckImage = '/assets/18da02685b40a6d858b6c680dda16079eb3f9574.png';
 
 interface KIRPairingHistory {
   id: string;

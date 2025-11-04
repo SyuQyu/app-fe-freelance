@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from "react";
 import {
   Plus,
@@ -50,7 +52,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 
 interface MaintenanceRequest {
   id: string;
@@ -69,7 +71,7 @@ interface MaintenanceRequest {
     | "other";
   title: string;
   description: string;
-  priority: "critical" | "non-critical";
+  priority: "critical" | "non-critical" | "high" | "medium" | "low";
   requestedBy: string;
   requestDate: string;
   status:
@@ -112,7 +114,7 @@ interface WorkflowAlert {
     | "budget_exceeded"
     | "workshop_capacity";
   message: string;
-  priority: "critical" | "non-critical";
+  priority: "critical" | "non-critical" | "high" | "medium" | "low";
   createdAt: string;
   acknowledged: boolean;
   relatedRequestId?: string;
@@ -714,7 +716,10 @@ export function MaintenanceWorkflow({
       mileage: String(request.mileage),
       requestDate: request.requestDate,
       maintenanceType: request.type,
-      category: request.priority,
+      category:
+        request.priority === "critical"
+          ? "critical"
+          : "non-critical",
       issue: request.description,
       keterangan: request.notes || "",
       photoIssues: [], // Reset to empty array

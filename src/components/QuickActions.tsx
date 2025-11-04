@@ -1,3 +1,5 @@
+'use client';
+
 import { Plus, Download, Upload, RefreshCw, AlertTriangle, Settings, MapPin, Calendar } from 'lucide-react';
 
 export function QuickActions() {

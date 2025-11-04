@@ -1,16 +1,16 @@
+'use client';
+
 import { Menu, Mail, Bell, Search, ChevronDown, Maximize2, Wifi, Clock, User, Settings, LogOut } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { useAuth } from './AuthContext';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
-interface HeaderProps {
-  onNavigate?: (page: string) => void;
-}
-
-export function Header({ onNavigate }: HeaderProps = {}) {
+export function Header() {
   const { user, logout } = useAuth();
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
+  const router = useRouter();
   
   const profileRef = useRef<HTMLDivElement>(null);
   const notificationRef = useRef<HTMLDivElement>(null);
@@ -173,7 +173,7 @@ export function Header({ onNavigate }: HeaderProps = {}) {
                 <button 
                   onClick={() => {
                     setShowProfileMenu(false);
-                    onNavigate?.('UserProfile');
+                    router.push('/user-profile');
                   }}
                   className="w-full flex items-center gap-3 px-3 py-2 hover:bg-gray-50 text-left"
                 >
@@ -183,7 +183,7 @@ export function Header({ onNavigate }: HeaderProps = {}) {
                 <button 
                   onClick={() => {
                     setShowProfileMenu(false);
-                    onNavigate?.('SystemSettings');
+                    router.push('/system-settings');
                   }}
                   className="w-full flex items-center gap-3 px-3 py-2 hover:bg-gray-50 text-left"
                 >

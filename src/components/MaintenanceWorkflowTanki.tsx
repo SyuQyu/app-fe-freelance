@@ -1,3 +1,5 @@
+'use client';
+
 import { MaintenanceWorkflow } from './MaintenanceWorkflow';
 
 export function MaintenanceWorkflowTanki() {

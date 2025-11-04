@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Settings, Plus, Edit, Trash2, Eye, EyeOff, Search, Save, X } from 'lucide-react';
 import { Button } from './ui/button';
@@ -8,7 +10,7 @@ import { Badge } from './ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { useDropdownSettings, DropdownOption } from './DropdownSettingsContext';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 export function SystemSettings() {
   const { categories, getOptions, addOption, updateOption, deleteOption, toggleOption } = useDropdownSettings();

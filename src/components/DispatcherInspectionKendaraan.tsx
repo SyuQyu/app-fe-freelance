@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -10,7 +12,7 @@ import { Textarea } from './ui/textarea';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from './ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { Search, Plus, Filter, Eye, Trash2, ClipboardCheck, CheckCircle, AlertCircle, Calendar, User, Truck, Shield, ChevronsUpDown, Check } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { useDropdownSettings } from './DropdownSettingsContext';
 
 interface InspectionChecklistItem {

@@ -1,3 +1,5 @@
+'use client';
+
 import { DocumentSPP } from './DocumentSPP';
 import { FileText, Upload, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';

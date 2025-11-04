@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
@@ -7,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { ArrowLeft, Calendar as CalendarIcon, Save, Calculator, AlertCircle } from 'lucide-react';
 import { Badge } from './ui/badge';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface FormData {
   tanggal: string;

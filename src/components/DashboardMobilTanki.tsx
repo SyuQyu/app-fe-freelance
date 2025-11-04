@@ -1,3 +1,5 @@
+'use client';
+
 import { RefreshCw, Calendar, Download, Settings } from 'lucide-react';
 import { StatsCards } from './StatsCards';
 import { MapView } from './MapView';

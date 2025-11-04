@@ -1,13 +1,15 @@
+'use client';
+
 import { useState } from 'react';
 import { Search, Plus, Edit, Trash2, Eye, Filter, Download, Upload, User, IdCard, AlertCircle } from 'lucide-react';
 import { Textarea } from './ui/textarea';
-import exampleImage from 'figma:asset/51a0776848d18d18d035bb3b264650029fb3c807.png';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Badge } from './ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+const exampleImage = '/assets/51a0776848d18d18d035bb3b264650029fb3c807.png';
 
 interface Driver {
   id: string;

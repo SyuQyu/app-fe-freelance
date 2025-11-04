@@ -8,7 +8,7 @@ import { RecentAlerts } from './RecentAlerts';
 
 export function DashboardMobilTanki() {
   return (
-    <div className="p-6 max-w-full">z
+    <div className="p-6 max-w-full">
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
         <div>
